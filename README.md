@@ -1,4 +1,4 @@
-                                         Face Recognition Attendance Management System Using Python
+  # FACE RECOGNITION ATTENDANCE MANAGEMENT SYSTEM
                                          
 
 ![image](https://user-images.githubusercontent.com/77448860/172698617-db68ae7b-992d-4b0a-8ce0-cef5409bfd00.png)
@@ -79,7 +79,7 @@ Cons:
 •	Noisy image can reduce your accuracy so quality of images matter.
 •	Doesn’t work on non-frontal images.
 
-#For more information contact
+# For more information contact
 Email:griffintbr@gmail.com
 
 # SCREENSHOTS
