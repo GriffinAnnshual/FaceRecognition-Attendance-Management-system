@@ -1,6 +1,9 @@
                                          Face Recognition Attendance Management System Using Python
                                          
 
+![image](https://user-images.githubusercontent.com/77448860/172698617-db68ae7b-992d-4b0a-8ce0-cef5409bfd00.png)
+
+
 About the problem: 
 
 The main intention of this project is to solve the issues encountered in the old attendance system while reproducing a brand new GUI based attendance system that can provide convenience to the institution. In this project, an application is created which is capable of recognizing the identity of each individuals and eventually record down the data into a database system. Apart from that, an excel sheet is created which shows the students attendance which can be directly mailed to the respected faculty.
@@ -82,17 +85,31 @@ Email:griffintbr@gmail.com
 # SCREENSHOTS
 
 Main folder
+
+
 ![image](https://user-images.githubusercontent.com/77448860/172698097-2eb160a3-1428-4a26-92db-cb7e1abe63ce.png)
 
+
 \TrainingImage
+
+
 ![image](https://user-images.githubusercontent.com/77448860/172698362-43ae2e7c-8470-44ee-815b-e0c31e7c3cf2.png)
 
+
 \TraningImageLabel
+
+
 ![image](https://user-images.githubusercontent.com/77448860/172698476-909db639-5a89-4e82-8071-399668d652d9.png)
 
+
 \StudentDetails
+
+
 ![image](https://user-images.githubusercontent.com/77448860/172698572-2cf1eebf-9935-4942-b600-ee9fd636212f.png)
 
+
 FaceDetection
+
+
 ![image](https://user-images.githubusercontent.com/77448860/172698732-3c2662b4-eebe-4142-bfb4-b95b399323e4.png)
 
