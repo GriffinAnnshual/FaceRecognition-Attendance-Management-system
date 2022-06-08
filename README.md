@@ -4,11 +4,11 @@
 ![image](https://user-images.githubusercontent.com/77448860/172698617-db68ae7b-992d-4b0a-8ce0-cef5409bfd00.png)
 
 
-About the problem: 
+# About the problem: 
 
 The main intention of this project is to solve the issues encountered in the old attendance system while reproducing a brand new GUI based attendance system that can provide convenience to the institution. In this project, an application is created which is capable of recognizing the identity of each individuals and eventually record down the data into a database system. Apart from that, an excel sheet is created which shows the students attendance which can be directly mailed to the respected faculty.
 
-Main objective:
+# Main objective:
 
 	To develop a GUI integrated attendance system using face recognition to take attendance.
 	Registration of new faces and face recognition is to be done manually.
@@ -21,45 +21,45 @@ Scope of the project:
 	 The facial recognition process can only be done for 1 person at a time.
 
  
-Working methodology:
+# Working methodology:
 
 ![image](https://user-images.githubusercontent.com/77448860/172699029-721bd1a9-0d83-4f2d-9137-12f0c2d7eadb.png)
 
 The Aim of this project is to take attendance using face detection. This program makes CSV file of present attendees automatically after successful face detection. Also, it will make a CSV file for registered 
 I made this program using these libraries. OpenCV, Numpy, OS, Pandas, Tkinter, mysql.connector, csv, Datetime 
 
-i) Graphical User Interface:
+# i) Graphical User Interface:
 
 In this project, I made one simple GUI using the python Tkinter library so that the user can easily use this project without any backend knowledge. Tkinter is the standard GUI library for Python.
 For making this GUI. I mainly used Tkinter’s frame, menubar, button, label, message box, table, textbox, etc. I divide my main screen into two parts which are nothing but frames. one is for Registration and the second is for taking attendance.
 As shown in the above image this GUI will help users to register new students as well as to take attendance. At the bottom, it will also show you the total number of registered students.
 This GUI window also contains menubar with two sub-menu Help and About. The help menu contains 3 commands contact me, change Admin Password, exit.
 
-ii) Take Images:
+# ii) Take Images:
 
 When users register for new students it will take 100 images of that student and save these images to one folder which will be created at the time of first registration. I use OpenCV to take images and detection.
 OpenCV is a library of programming functions mainly aimed at real-time computer vision. I used a cascade classifier of OpenCV for face detection. To use this cascade classifier we need the haarcascade_frontalface_default.xml file which includes all the haar cascade features of a face.
 When users want to register new students they have to enter first details like ID and Name. After that, they have to take images of the student for that when the user presses the button ‘Take Images’ webcam will start and it will take 100 images of the student.
 There are some methods in OpenCV to take Images. using video frame of OpenCV I’m taking frames and from that, I’m extracting only face images using cascade classifier. After taking images I will store those images in one folder.
 
-iii) Save Profile:
+# iii) Save Profile:
 
 When images will be taken for any student user needs to click the ‘save profile’ button so that it will ask for the admin password. If the admin password was not set it will ask you first to set the admin password or else you need to enter the admin password. This password will be saved in one plan txt file.
 If this password is correct then it will call the trainer function which will be going to generate a YML file and it will train our LBPH recognizer using those 100 images. This YML file and password txt file will save in one different folder name “pass_train”.
 After saving the profile there are 3 different folders generated in the current directory. Out of those 3 folders, one is containing images of students, the second one is containing a CSV file of student’s details and the third one is containing a pass.txt file and YMLfile.
 
-iv) Taking Attendance:
+# iv) Taking Attendance:
 
 When a user wants to take attendance and press the ‘Open camera’ button webcam will start and one video frame window will generate to recognize the faces using the YML file. If the face will successfully recognize then it will put the name of the person at the bottom of the rectangle which is showing the detected face area.
 After successfully recognized the attendance will be shown in the table in the 2nd frame and the Attandance.csv file will be generated in a particular folder. This CSV file contains the student’s ID, name along with time at which attendance was taken for that student.
 Attendance will store in one CSV file. This CSV file will be created datewise i.e attendance of one day is store in one CSV file. If a person will not recognize then in a video capturing it will show unknown. 
 Entering Attendance in MYSQL Database: The Attendance will also be stored in the database named ‘facedb’ by python using the library mysql.connector’. A tabular column named “Attendance sheet will be created it contains the id, Name, Date and time of attendance.
 
-vi) Algorithms:
+# vi) Algorithms:
 
 Face Detection using Haar Cascade Classifier:  It is an Object Detection Algorithm used to identify faces in an image or a real time     video. The algorithm uses edge or line detection features proposed by Viola and Jones in their research paper “Rapid Object Detection using a Boosted Cascade of Simple Features” published in 2001. The detection is done using cv.CascadeClassifier. detectMultiScale ( ) method, which returns boundary rectangles for the detected faces. Haarcascade_frontalface_detection.xml file is used to train the classifier for accurate face detection.
 
-Face Recognition using Local Binary Patterns Histograms Recognizer: 
+# Face Recognition using Local Binary Patterns Histograms Recognizer: 
 
 LBPH stands for Local Binary Pattern Histogram, this algorithm is proposed in 2006, It is a basic algorithm that’s used to detect faces from front side. It is used for object as well as face detection. The LBP operator helps to get local features by Local Binary Pattern acts. The local special arrangement of the face is shortened by these LBP acts. The LBP operator divides the face in the image into pixels. Every pixel is associated with 8 neighbor pixels that surroundings it. Each pixel value is then compared with the surrounding neighbor pixel values. Using the LBP combined with histograms we can represent the face images with a simple data vector. The input facial images can be represented in the form of histograms using recognizer.train( ) method. The trained data is stored in the form of .xml file. The recognizer.predict () method will take captured portion of the face to be analyzed as a parameter and will return its probable owner, indicating its id and how much confidence the recognizer is in relation with this match.
 
@@ -79,8 +79,7 @@ Cons:
 •	Noisy image can reduce your accuracy so quality of images matter.
 •	Doesn’t work on non-frontal images.
 
-# For more information contact
-Email:griffintbr@gmail.com
+# For more information contact  Email:  griffintbr@gmail.com
 
 # SCREENSHOTS
 
